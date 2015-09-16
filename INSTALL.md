@@ -23,11 +23,12 @@ requirements.
 
 ## Compiling from source
 
-GHC 7.6.1 or newer is required to compile from source. The easiest way is to
-use `cabal-install`:
+GHC 7.6.1 or newer is required to compile from source. Because for some reason
+`alex` and `happy` are not specified as dependencies and just assumed to be 
+installed you need to install them manually. The easiest way is to use `cabal-install`:
 
 ```
-$ cabal update && cabal install purescript
+$ cabal update && cabal install alex happy purescript
 ```
 
 The PureScript compiler has been known to run on OS X 10.6 when built with GHC
