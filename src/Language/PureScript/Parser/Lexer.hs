@@ -523,4 +523,4 @@ reservedTypeNames = [ "forall", "where" ]
 -- The characters allowed for use in operators
 --
 isSymbolChar :: Char -> Bool
-isSymbolChar c = (c `elem` ":!#$%&*+./<=>?@\\^|-~") || (not (isAscii c) && isSymbol c)
+isSymbolChar c = (c `elem` (":!#$%&*+./<=>?@\\^|-~" :: String)) || (not (isAscii c) && isSymbol c)

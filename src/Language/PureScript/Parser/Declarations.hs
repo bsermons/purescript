@@ -15,7 +15,8 @@ module Language.PureScript.Parser.Declarations (
     parseBinder,
     parseBinderNoParens,
     parseImportDeclaration',
-    parseLocalDeclaration
+    parseLocalDeclaration,
+    parseTypeDeclaration
 ) where
 
 import Prelude hiding (lex)
