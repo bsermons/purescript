@@ -32,7 +32,7 @@ import Language.PureScript.Types
 data Substitution = Substitution
   { substType :: M.Map Int Type -- ^ Type substitution
   , substKind :: M.Map Int Kind -- ^ Kind substitution
-  }
+  } deriving (Show)
 
 -- | An empty substitution
 emptySubstitution :: Substitution
@@ -47,7 +47,7 @@ data CheckState = CheckState
   , checkNextSkolemScope :: Int             -- ^ The next skolem scope constant
   , checkCurrentModule :: Maybe ModuleName  -- ^ The current module
   , checkSubstitution :: Substitution       -- ^ The current substitution
-  }
+  } deriving (Show)
 
 -- | Create an empty @CheckState@
 emptyCheckState :: Environment -> CheckState
